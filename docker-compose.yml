@@ -1,0 +1,12 @@
+version: '3'
+services:
+        vivado:
+                image: vivado_builder
+                container_name: vivado
+                restart: unless-stopped
+                ports:
+                        - '2200:22'
+                volumes:
+                        - /mnt/raid1/vivado/vivado-install:/opt/Xilinx
+                        - /mnt/raid1/vivado/vivado-ssh:/root/.ssh
+                        - /mnt/raid1/vivado/vivado-projects:/usr/share/vivado-projects

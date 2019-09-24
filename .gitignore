@@ -1,0 +1,3 @@
+# ignore all swap file
+*.swp
+*.swo
